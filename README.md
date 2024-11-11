@@ -1,66 +1,60 @@
-## Foundry
+# Gas optimization quizz
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Homework for students on the topic of gas optimization.
 
-Foundry consists of:
+Any tricks can be used in the solution, the main thing is to reduce the cost of gas contracting.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Using ONLY the solidity optimizer is not a solution to the task!
 
-## Documentation
+The last task requires optimizing the performance of the entire contract.
 
-https://book.getfoundry.sh/
+## Task
 
-## Usage
+Given contract `A`, we need to write a second contract named `AOptimized`.
 
-### Build
+Do not change the names of functions inside the contract!!!
 
-```shell
-$ forge build
+Example,
+
+```solidity
+// file A.sol
+
+contract A {
+    function call() public {
+        // Original function
+    }
+}
+
+contract AOptimized {
+    function call() public {
+        // Your optimization
+    }
+}
 ```
 
-### Test
+Answers are checked manually and with the commands
 
-```shell
-$ forge test
+```sh
+forge test --match-contract ArrayLength
+forge test --match-contract ArrayLength --gas-report
 ```
 
-### Format
+Test the same way in different contracts
 
-```shell
-$ forge fmt
-```
+Example,
 
-### Gas Snapshots
+```solidity
+// file A.t.sol
 
-```shell
-$ forge snapshot
-```
+contract ATest is Test{
+    function test_call() public {
+        // Original test
+    }
+}
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+contract AOptimizedTest is Test {
+    function test_call() public {
+        // Your test
+    }
+}
 ```
