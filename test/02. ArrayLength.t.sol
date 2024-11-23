@@ -17,3 +17,7 @@ contract ArrayLengthsTest is Test {
         arrayLength.callFor();
     }
 }
+
+contract ArrayLengthOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

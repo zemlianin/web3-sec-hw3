@@ -19,3 +19,7 @@ contract SwapTest is Test {
         assertEq(b, 300);
     }
 }
+
+contract SwapOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

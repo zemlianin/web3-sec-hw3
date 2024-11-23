@@ -24,3 +24,7 @@ contract PackVariablesTest is Test {
         // }
     }
 }
+
+contract PackVariablesOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

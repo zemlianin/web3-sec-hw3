@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Loops {
+import "./Interfaces.sol";
+
+contract Loops is ILoops {
     function loopFor() public pure {
         uint256 sum;
         for (uint256 i = 0; i < 20; i++) {
@@ -26,5 +28,19 @@ contract Loops {
             sum = sum + i;
             i++;
         } while (i < 10);
+    }
+}
+
+contract LoopsOptimized is ILoops {
+    function loopFor() public pure {
+        /* YOUR SOLUTION GOES HERE */
+    }
+
+    function loopWhile() public pure {
+        /* YOUR SOLUTION GOES HERE */
+    }
+
+    function loopDoWhile() public pure {
+        /* YOUR SOLUTION GOES HERE */
     }
 }

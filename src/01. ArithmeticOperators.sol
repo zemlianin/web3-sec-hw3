@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract Addition {
+import "./Interfaces.sol";
+
+contract Addition is IAddition {
     uint256 number = 1;
 
     function addition(uint256 value) public {
@@ -9,7 +11,7 @@ contract Addition {
     }
 }
 
-contract Subtraction {
+contract Subtraction is ISubtraction {
     uint256 number = 100;
 
     function subtraction(uint256 value) public {
@@ -17,12 +19,38 @@ contract Subtraction {
     }
 }
 
-contract Division {
+contract Division is IDivision {
     function divisionBy2(uint256 number) public pure returns (uint256) {
         return number / 2;
     }
 
     function divisionBy128(uint256 number) public pure returns (uint256) {
         return number / 128;
+    }
+}
+
+contract AdditionOptimized is IAddition {
+    uint256 number = 1;
+
+    function addition(uint256 value) public {
+        /* YOUR SOLUTION GOES HERE */
+    }
+}
+
+contract SubtractionOptimized is ISubtraction {
+    uint256 number = 100;
+
+    function subtraction(uint256 value) public {
+        /* YOUR SOLUTION GOES HERE */
+    }
+}
+
+contract DivisionOptimized is IDivision {
+    function divisionBy2(uint256 number) public pure returns (uint256) {
+        /* YOUR SOLUTION GOES HERE */
+    }
+
+    function divisionBy128(uint256 number) public pure returns (uint256) {
+        /* YOUR SOLUTION GOES HERE */
     }
 }

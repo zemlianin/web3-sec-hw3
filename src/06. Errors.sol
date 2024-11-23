@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract Errors {
-    address owner;
+import "./Interfaces.sol";
 
-    error Unauthorized(address);
+contract Errors is IErrors {
+    address owner;
 
     modifier onlyOwner() {
         require(owner == msg.sender, "Error: You are not a owner!");
@@ -16,4 +16,10 @@ contract Errors {
     }
 
     function call() public view onlyOwner {}
+}
+
+contract ErrorsOptimized is IErrors {
+    /* YOUR SOLUTION GOES HERE */
+
+    function call() public view {}
 }

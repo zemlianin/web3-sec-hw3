@@ -20,3 +20,7 @@ contract ErrorsTest is Test {
         vm.stopPrank();
     }
 }
+
+contract ErrorsOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

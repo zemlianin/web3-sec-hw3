@@ -33,3 +33,7 @@ contract ArithmeticOperatorsTest is Test {
         division.divisionBy128(1024);
     }
 }
+
+contract ArithmeticOperatorsOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

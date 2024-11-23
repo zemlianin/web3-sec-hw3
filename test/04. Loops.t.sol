@@ -25,3 +25,7 @@ contract LoopsTest is Test {
         loops.loopDoWhile();
     }
 }
+
+contract LoopsOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

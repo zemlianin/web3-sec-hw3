@@ -18,3 +18,7 @@ contract CalldataMemoryTest is Test {
         calldataMemory.add(arr);
     }
 }
+
+contract CalldataMemoryOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

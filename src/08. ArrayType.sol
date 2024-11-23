@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.25;
 
-contract ArrayType {
+import "./Interfaces.sol";
+
+contract ArrayType is IArrayType {
     uint256[] array;
 
     function initArray() public {
@@ -9,4 +11,10 @@ contract ArrayType {
             array.push(i);
         }
     }
+}
+
+contract ArrayTypeOptimized is IArrayType {
+    /* YOUR SOLUTION GOES HERE */
+
+    function initArray() public {}
 }

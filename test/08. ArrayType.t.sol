@@ -17,3 +17,7 @@ contract ArrayTypeTest is Test {
         array.initArray();
     }
 }
+
+contract ArrayTypeOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}

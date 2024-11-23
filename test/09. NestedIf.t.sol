@@ -20,3 +20,7 @@ contract NestedIfTest is Test {
         nestedIf.call(69);
     }
 }
+
+contract NestedIfOptimizedTest is Test {
+/* YOUR SOLUTION GOES HERE */
+}
