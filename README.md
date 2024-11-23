@@ -8,6 +8,8 @@ Using ONLY the solidity optimizer is not a solution to the task!
 
 The last task requires optimizing the performance of the entire contract.
 
+**Tasks 1-9 are worth 1 point, task 10 is worth 5 points**
+
 ## Task
 
 Given contract `A`, we need to write a second contract named `AOptimized`.
