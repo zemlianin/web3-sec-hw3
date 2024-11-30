@@ -14,7 +14,14 @@ contract ArrayType is IArrayType {
 }
 
 contract ArrayTypeOptimized is IArrayType {
-    /* YOUR SOLUTION GOES HERE */
+    uint256[200] array;
 
-    function initArray() public {}
+    function initArray() public {
+     unchecked {
+            for (uint256 i = 0; i < 200;) {
+                array[i] = i; 
+                i++;
+            }
+        }
+    }
 }
