@@ -1,6 +1,6 @@
 ## Отчет дз3
 ### №1
-```
+``` bash
 Ran 4 tests for test/01. ArithmeticOperators.t.sol:ArithmeticOperatorsOptimizedTest
 [PASS] test_Addition() (gas: 10378)
 [PASS] test_DivisionBy128() (gas: 5451)
@@ -22,7 +22,7 @@ Ran 2 test suites in 32.20ms (32.46ms CPU time): 8 tests passed, 0 failed, 0 ski
 
 ---
 ### №2
-```
+``` bash
 Ran 1 test for test/02. ArrayLength.t.sol:ArrayLengthOptimizedTest
 [PASS] test_Call() (gas: 8481)
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 459.11µs (68.00µs CPU time)
@@ -48,9 +48,10 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 495.11µs (108.00µ
 Экономия была достигнута путем сокращения числа обращений к хранилищу,для получения числа элементов
 Таким образом, экономия на каждый вызов составила 492 газа, однако, из-за введения новой переменной цена развертывания поднялась на 444
 таким образом мы сэкономили газ на вызов, на немного стали дороже в развертывании, но это подорожание в развертывании окупиться первым же вызовом.
+
 ---
 ### №3
-```
+``` bash
 Ran 1 test for test/03. CalldataMemory.t.sol:CalldataMemoryOptimizedTest
 [PASS] test_Call() (gas: 30923)
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 530.91µs (87.40µs CPU time)
@@ -67,7 +68,7 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 662.92µs (109.90µ
 ---
 
 ### №4
-```
+``` bash
 Ran 3 tests for test/04. Loops.t.sol:LoopsOptimizedTest
 [PASS] test_doWhile() (gas: 5843)
 [PASS] test_for() (gas: 6561)
@@ -85,7 +86,7 @@ Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 2.32ms (1.00ms CPU 
 ---
 
 ### №5
-```
+``` bash
 Ran 1 test for test/05. PackVariables.t.sol:PackVariablesOptimizedTest
 [PASS] test_set() (gas: 148438)
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.58ms (2.25ms CPU time)
@@ -99,7 +100,7 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.61ms (2.77ms CPU 
 ---
 
 ### №6
-```
+``` bash
 Ran 1 test for test/05. PackVariables.t.sol:PackVariablesOptimizedTest
 [PASS] test_set() (gas: 137295)
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 681.51µs (180.20µs CPU time)
@@ -113,8 +114,7 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 465.21µs (159.50µ
 ---
 
 ### №7
-```
-Compiler run successful!
+``` bash
 
 Ran 1 test for test/07. Swap.t.sol:SwapOptimizedTest
 [PASS] test_swap() (gas: 8798)
@@ -126,8 +126,10 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 276.31µs (42.60µs
 ```
 Оптимизация заключается в замене разницы на более оптимальный ксор.
 
+---
+
 ### №8
-```
+``` bash
 Ran 1 test for test/08. ArrayType.t.sol:ArrayTypeOptimizedTest
 [PASS] test_init() (gas: 4442156)
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 669.01µs (264.91µs CPU time)
@@ -138,8 +140,10 @@ Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 779.82µs (402.51µ
 ```
 Оптимизация заключается в использовании заранее выделенной памяти под все элементы массива и директивны анчекинг
 
+---
+
 ### №9
-```
+``` bash
 Compiler run successful!
 
 Ran 1 test for test/09. NestedIf.t.sol:NestedIfTest
@@ -151,10 +155,12 @@ Ran 1 test for test/09. NestedIf.t.sol:NestedIfOptimizedTest
 Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 274.21µs (49.90µs CPU time)
 ```
 
-Оптимизация заключается в сокращении логики if к выводу флага независимо от его результата
+Оптимизация заключается в сокращении логики c if, до обычного вывода флага независимо от его результата
+
+---
 
 ### №10
-```
+``` bash
 [PASS] testConfirmTransaction() (gas: 207550)
 [PASS] testExecuteTransaction() (gas: 320901)
 [PASS] testExecutionFailure() (gas: 281582)
@@ -175,7 +181,10 @@ Ran 8 tests for test/10. MultiSigWallet.t.sol:MultiSigWalletOptimizedTest
 [PASS] testOnlyOwnerCanSubmit() (gas: 32561)
 [PASS] testSubmitTransaction() (gas: 117305)
 ```
+
 1. Обрезание размера массива вместо его полного перекопирования в меньший 
 2. Оптимизация числа обращений к хранилищу где возможно
 3. Оптимизация числа обращений по индексу где возможно 
 4. Использование дополнительного поля словаря с адресами овнеров, для быстрой проверки овнера, вместо метода с перебором массива в цикле
+
+(В этом задании, я написал свои оптимизации еще дополнительно комментариями в коде)
